@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-Only</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--Navigation-->
+
+    <header>
+      <h1 class="logo"><a href="index.html">LOGO</a></h1>
+
+      <input type="checkbox" id="toggler" class="toggler" />
+      <label for="toggler" class="hamburger">
+        <div class="top-bun"></div>
+        <div class="meat"></div>
+        <div class="bottom-bun"></div>
+      </label>
+
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html" class="menu-item">Home</a></li>
+          <li class="parent" id="parent">
+            <a href="page2.html" class="menu-item">Dropdown</a
+            ><i class="material-icons" id="icon">expand_more</i>
+            <ul class="dropdown" id="dropdown">
+              <li><a href="page2a.html">Page 2a</a></li>
+              <li><a href="page2b.html">Page 2b</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html" class="menu-item active">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+
+    <div class="contact">
+      <div><h2>Contact us below</h2></div>
+      <div><textarea name="" id="" cols="50" rows="10"></textarea></div>
+      <div>
+        <input type="email" name="" id="" placeholder="Enter your email" />
+      </div>
+      <div><button type="submit">Submit</button> <button>Clear</button></div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

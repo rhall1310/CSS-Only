@@ -1,0 +1,239 @@
+html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serifs;
+  margin: 0px;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+/* Header and navbar */
+
+header {
+  background: #09ce9d;
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  border-radius: 0 0 2em 2em;
+  z-index: 3;
+  border: 0.2em rgb(0, 107, 71);
+  border-style: none solid solid solid;
+}
+
+.logo {
+  padding-left: 1em;
+}
+
+.logo a {
+  text-decoration: none;
+  display: flex;
+  color: inherit;
+  max-width: 8em;
+}
+
+#toggler {
+  position: absolute;
+  right: 1em;
+  top: 2em;
+  opacity: 0;
+}
+
+.hamburger {
+  position: absolute;
+  top: 4em;
+  right: 2em;
+  margin-left: -2em;
+  margin-top: -45px;
+  width: 2em;
+  height: 45px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.hamburger div {
+  position: relative;
+  width: 3em;
+  height: 7px;
+  border-radius: 3px;
+  background-color: #ab3516;
+  margin-top: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#toggler:checked + .hamburger .top-bun {
+  transform: rotate(-45deg);
+  margin-top: 25px;
+}
+#toggler:checked + .hamburger .bottom-bun {
+  opacity: 0;
+  transform: rotate(45deg);
+}
+#toggler:checked + .hamburger .meat {
+  transform: rotate(45deg);
+  margin-top: -7px;
+}
+
+nav {
+  width: 0px;
+  transition: width 0.5s ease-in-out;
+  background: #4db990;
+  padding: 0px;
+  margin: 0px;
+  align-self: flex-end;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  background: #4db990;
+  text-align: center;
+  gap: 0;
+  box-shadow: 2px 2px 2px 2px black;
+  border-radius: 1em 0em 0em 1em;
+  align-items: center;
+  font-weight: bold;
+  align-self: center;
+  padding: 0;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: inherit;
+}
+nav ul li {
+  overflow: hidden;
+  width: 100%;
+  padding: 1em 0;
+  min-width: 0px;
+  height: 100%;
+  text-align: center;
+}
+
+nav ul li a {
+  display: block;
+}
+
+
+
+.parent {
+  padding: 0.1em 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  padding-top: 0.6em;
+}
+
+.dropdown {
+  height: 0;
+  position: relative;
+  box-shadow: none;
+  background-color: #4db990;
+  border-radius: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+}
+
+.dropdown li,
+.dropdown li a {
+  padding: 0.25em;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.parent:hover .dropdown {
+  height: 6em;
+  transform: translateY(0);
+}
+
+#toggler:checked ~ nav {
+  transform: translateX(-);
+  width: 14em;
+  position: relative;
+}
+
+@media screen and (max-width: 800x) {
+  nav > ul li:nth-child(even) {
+    background: #2c966d;
+  }
+  
+}
+
+@media screen and (min-width: 800px) {
+  .hamburger {
+    display: none;
+  }
+
+  header {
+    flex-direction: row;
+    min-height: 4em;
+    align-items: center;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  nav {
+       
+    position: relative;
+    min-width: 24em;
+    align-self: auto;
+    min-height: 2em;
+    background-color: transparent;    
+  }
+
+  nav ul {
+    flex-direction: row;
+    background-color: transparent;
+    box-shadow: none;
+    margin: 0;
+    justify-self: center;
+  }
+
+  nav ul li {
+    
+    background-color: transparent;
+   
+  }
+
+  .parent {
+    display: block;
+    padding: 1em;
+    
+    
+  }
+
+  .parent i, .parent a {
+    display: inline-block;
+    font-size: 1rem;
+    
+  }
+
+  .dropdown {
+    width: 8em;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 0 0 1em 1em;
+    align-items: center;
+    box-shadow: 0.2em 0 0.2em 0;
+       
+  }
+
+ 
+  .parent:hover .dropdown {
+    height: 6em;
+    transform: translateY(0);
+  }
+
+
+
+  
