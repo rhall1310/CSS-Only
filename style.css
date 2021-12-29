@@ -7,7 +7,23 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serifs;
   margin: 0px;
   overflow-x: hidden;
-  height: 100vh;
+}
+
+/* Footer */
+
+.flex-footer {
+  background-color: #09ce9d;
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  padding: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.flex-footer p {
+  margin: 0.2em;
 }
 
 /* Header and navbar */
@@ -99,6 +115,7 @@ nav ul {
   font-weight: bold;
   align-self: center;
   padding: 0;
+  border-radius: 0 0 2em 0;
 }
 
 nav ul a {
@@ -116,9 +133,8 @@ nav ul li {
 
 nav ul li a {
   display: block;
+  border-radius: 1em;
 }
-
-
 
 .parent {
   padding: 0.1em 0;
@@ -143,7 +159,7 @@ nav ul li a {
 
 .dropdown li,
 .dropdown li a {
-  padding: 0.25em;
+  padding-top: 0.5em;
   display: block;
   align-items: center;
   justify-content: center;
@@ -164,7 +180,6 @@ nav ul li a {
   nav > ul li:nth-child(even) {
     background: #2c966d;
   }
-  
 }
 
 @media screen and (min-width: 800px) {
@@ -183,12 +198,11 @@ nav ul li a {
   }
 
   nav {
-       
     position: relative;
     min-width: 24em;
     align-self: auto;
     min-height: 2em;
-    background-color: transparent;    
+    background-color: transparent;
   }
 
   nav ul {
@@ -200,22 +214,18 @@ nav ul li a {
   }
 
   nav ul li {
-    
     background-color: transparent;
-   
   }
 
   .parent {
     display: block;
     padding: 1em;
-    
-    
   }
 
-  .parent i, .parent a {
+  .parent i,
+  .parent a {
     display: inline-block;
     font-size: 1rem;
-    
   }
 
   .dropdown {
@@ -224,16 +234,22 @@ nav ul li a {
     position: absolute;
     border-radius: 0 0 1em 1em;
     align-items: center;
-    box-shadow: 0.2em 0 0.2em 0;
-       
+    box-shadow: 0.2em 0 0.2em 0 black;
+    top: 2.5em;
+    background: #09ce9d;
   }
 
- 
+  .dropdown li {
+    border-bottom: 2px rgb(0, 107, 71) solid;
+  }
+  nav li:hover,
+  nav li a:hover {
+    background-color: #ab3516;
+    color: white;
+  }
+
   .parent:hover .dropdown {
     height: 6em;
     transform: translateY(0);
   }
-
-
-
-  
+}

@@ -45,8 +45,8 @@
 
     <!--Main content-->
 
-    <div class="grid-container">
-      <div class="grid-item">
+    <div class="grid">
+      <div class="text-welcome">
         <h2>Welcome</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
@@ -60,20 +60,6 @@
           perspiciatis assumenda iste distinctio quis accusantium labore
           excepturi. Dicta?
         </p>
-      </div>
-
-      <div class="grid-item">
-        <img src="assets/img1.jpg" alt="" class="image" />
-      </div>
-    </div>
-
-    <div class="grid-container">
-      <div class="grid-item">
-        <a href="#"><img src="assets/img2.jpg" alt="" class="image" /></a>
-      </div>
-
-      <div class="grid-item">
-        <h3>Info</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
           reprehenderit sed iure architecto eius autem alias quidem
@@ -82,17 +68,88 @@
           fugit est corrupti dolorum in dicta numquam eveniet! Tenetur quae
           nisi, natus delectus architecto ullam! Libero voluptatum optio,
           dolorum aspernatur esse iure nobis dolorem, enim alias incidunt qui
-          iusto sint eveniet distinctio laudantium nisi? Provident officiis,
-          perspiciatis assumenda iste distinctio quis accusantium labore
-          excepturi. Dicta?
+          iusto sint eveniet distinctio laudantium nisi?
+        </p>
+      </div>
+
+      <img src="assets/img1.jpg" alt="" class="img-1" />
+
+      <img src="assets/img2.jpg" alt="" class="img-2" />
+
+      <div class="text-info">
+        <h3>Info</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+          expedita. Odio et sapiente nostrum modi temporibus quaerat mollitia
+          optio soluta. Quidem, provident tenetur! Quidem ab vel accusantium
+          repellendus! Nesciunt architecto magni debitis obcaecati cupiditate
+          accusantium, sequi quia hic quidem, officia aliquid beatae delectus
+          maxime nemo, esse doloribus iusto! Veritatis aut sit possimus
+          voluptate atque cumque ab repudiandae, quo iste amet obcaecati ad
+          dolor natus temporibus libero asperiores voluptatibus vel aliquid
+          ullam alias dignissimos veniam. Ipsum, quibusdam eius. Sint,
+          consectetur placeat.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+          expedita. Odio et sapiente nostrum modi temporibus quaerat mollitia
+          optio soluta. Quidem, provident tenetur! Quidem ab vel accusantium
+          repellendus! Nesciunt architecto magni debitis obcaecati cupiditate
+          accusantium, sequi quia hic quidem, officia aliquid beatae delectus
+          maxime nemo, esse doloribus iusto! Veritatis aut sit possimus
+          voluptate atque cumque ab repudiandae, quo iste amet obcaecati ad
+          dolor natus temporibus libero asperiores voluptatibus vel aliquid
+          ullam alias dignissimos veniam. Ipsum, quibusdam eius. Sint,
+          consectetur placeat.
         </p>
       </div>
     </div>
 
-    <div class="flex-footer" style="padding-left: 1em; padding-top: 1em">
-      Copyright 2021 ©
-    </div>
+    <div class="flex-footer"><p>Copyright 2021 ©</p></div>
   </body>
 
   <script src="script.js"></script>
+
+  <style>
+    h2,
+    h3 {
+      padding: 1em;
+    }
+
+    p {
+      padding: 1em;
+    }
+
+    img {
+      margin: auto;
+      padding: 1em;
+      max-height: 25em;
+    }
+    .grid {
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1em;
+    }
+
+    .text-welcome {
+      grid-column: 1 / span 2;
+    }
+
+    .text-info {
+      grid-column: 3;
+      grid-row: 1 / span 2;
+      background-color: lightgray;
+      margin: 0.4em;
+    }
+    .img-1 {
+      grid-column: 1;
+      grid-row: 2;
+    }
+    .img-2 {
+      grid-column: 2;
+      grid-row: 2;
+    }
+  </style>
 </html>
