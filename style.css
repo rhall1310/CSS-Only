@@ -5,7 +5,7 @@ html {
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serifs;
-  margin: 0px;
+  margin: 0;
   overflow-x: hidden;
 }
 
@@ -20,6 +20,7 @@ body {
   position: fixed;
   bottom: 0;
   width: 100%;
+  max-height: 2em;
 }
 
 .flex-footer p {
@@ -115,7 +116,6 @@ nav ul {
   font-weight: bold;
   align-self: center;
   padding: 0;
-  border-radius: 0 0 2em 0;
 }
 
 nav ul a {
@@ -151,7 +151,6 @@ nav ul li a {
   height: 0;
   position: relative;
   box-shadow: none;
-  background-color: #4db990;
   border-radius: 0;
   overflow: hidden;
   transition: height 0.5s ease-in-out;
@@ -176,9 +175,12 @@ nav ul li a {
   position: relative;
 }
 
-@media screen and (max-width: 800x) {
-  nav > ul li:nth-child(even) {
-    background: #2c966d;
+@media screen and (max-width: 800px) {
+  #parent {
+    background-color: rgb(32, 170, 124);
+  }
+  #dropdown > li:nth-child(2) {
+    background-color: rgb(32, 170, 124);
   }
 }
 
@@ -194,7 +196,7 @@ nav ul li a {
   }
 
   .logo {
-    margin: 0;
+    margin: 0 0 0 2em;
   }
 
   nav {
@@ -203,6 +205,7 @@ nav ul li a {
     align-self: auto;
     min-height: 2em;
     background-color: transparent;
+    margin-right: 3em;
   }
 
   nav ul {
@@ -215,6 +218,11 @@ nav ul li a {
 
   nav ul li {
     background-color: transparent;
+    background-image: linear-gradient(90deg, white, orange);
+    background-size: 0 0px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    transition: all 300ms ease;
   }
 
   .parent {
@@ -229,27 +237,38 @@ nav ul li a {
   }
 
   .dropdown {
-    width: 8em;
     flex-direction: column;
     position: absolute;
     border-radius: 0 0 1em 1em;
     align-items: center;
     box-shadow: 0.2em 0 0.2em 0 black;
-    top: 2.5em;
+    top: 3em;
+    max-width: 9em;
     background: #09ce9d;
   }
 
   .dropdown li {
     border-bottom: 2px rgb(0, 107, 71) solid;
   }
-  nav li:hover,
-  nav li a:hover {
-    background-color: #ab3516;
-    color: white;
+  nav > ul > li:hover {
+    background-size: 100% 5px;
   }
 
   .parent:hover .dropdown {
     height: 6em;
     transform: translateY(0);
+  }
+
+  .dropdown li:hover {
+    color: lavenderblush;
+    background-color: #ab3516;
+  }
+
+  .active {
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #ab3516, #ab3516);
+    background-size: 100% 5px;
+    background-repeat: no-repeat;
+    background-position: left top;
   }
 }

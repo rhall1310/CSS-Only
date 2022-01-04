@@ -37,7 +37,9 @@
               <li><a href="page2b.html">Page 2b</a></li>
             </ul>
           </li>
-          <li><a href="contact.html" class="menu-item active">Contact</a></li>
+          <li class="active">
+            <a href="contact.html" class="menu-item">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -65,9 +67,6 @@
   </body>
   <script src="script.js"></script>
   <style>
-    .container {
-      display: flex;
-    }
     .contact {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -82,20 +81,36 @@
     .contact textarea {
       grid-column: 1 / span 2;
       border-radius: 1em;
+      padding: 0.5em;
     }
 
     .contact input {
       grid-column: 1 / span 2;
       border-radius: 0.6em;
+      padding: 0.3em;
+    }
+
+    button {
+      border-radius: 0.6em;
+      border: none;
+      padding: 0.4em;
+      font-weight: bold;
+      border: 1px black solid;
     }
 
     .submit {
-      background-color: cadetblue;
+      background-color: #09ce9d;
     }
 
     .clear {
-      background-color: rgb(83, 14, 14);
+      background-color: #ab3516;
       color: white;
+    }
+
+    @media screen and (min-width: 800px) {
+      .contact {
+        max-width: 40em;
+      }
     }
   </style>
 </html>
