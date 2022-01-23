@@ -44,33 +44,77 @@
 
     <!--Main content-->
 
-    <h2 style="margin: 1em">Lorem ipsum dolor</h2>
-    <h4 style="margin: 1em">Click a category to see more</h4>
+    <h2 style="text-align: center">Lorem ipsum dolor</h2>
+    <h4 style="text-align: center">Click a category to see more</h4>
 
-    <section class="image-grid">
-      <div class="tile">
-        <a href="page2a.html">
-          <img src="assets/img5.jpg" />
-        </a>
-
+    <section class="images">
+      <a href="page2a.html" class="tile">
+        <img src="assets/img5.jpg" />
         <h4>Page 2a</h4>
-      </div>
-      <div class="tile">
-        <a href="page2b.html">
-          <img src="assets/img4.jpg" />
-        </a>
-        <h4>Page 2b</h4>
-      </div>
-    </section>
-    <p style="text-align: center">
-      Talk to us about something
-      <a href="contact.html" style="font-weight: bold">here</a>
-    </p>
+      </a>
 
-    <div class="flex-footer" style="padding-left: 1em; padding-top: 1em">
-      Copyright 2021 ©
-    </div>
+      <a href="page2b.html" class="tile">
+        <img src="assets/img4.jpg" />
+        <h4>Page 2b</h4>
+      </a>
+    </section>
+
+    <div class="flex-footer"><p>Copyright 2021 ©</p></div>
   </body>
 
   <script src="script.js"></script>
+
+  <style>
+    .images {
+      display: flex;
+      justify-content: center;
+    }
+    .tile {
+      display: grid;
+      grid-template-rows: 5;
+      grid-template-columns: 1;
+      margin: 1em;
+    }
+
+    .tile > * {
+      grid-area: 1 / 1;
+    }
+    .tile img {
+      max-height: 25em;
+      max-width: 40em;
+    }
+
+    .tile h4 {
+      display: flex;
+      background-color: rgba(4, 5, 5, 0.2);
+      max-height: 2em;
+      margin-top: 0;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #ab3516;
+    }
+
+    a:hover h4 {
+      background-color: rgba(65, 192, 108, 0.7);
+    }
+
+    @media screen and (max-width: 800px) {
+      .images {
+        flex-direction: column;
+      }
+
+      .tile img {
+        max-height: 12em;
+        max-width: 100%;
+      }
+    }
+  </style>
 </html>
